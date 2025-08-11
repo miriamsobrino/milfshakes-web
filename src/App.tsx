@@ -13,7 +13,7 @@ function App() {
       ease: "power2.out",
       scrollTrigger: {
         scrub: 1,
-        start: "top top", // empieza cuando la parte superior de #logo-mask toca el top del viewport
+        start: "top top",
         end: "+=2000",
       },
     });
@@ -21,12 +21,16 @@ function App() {
     tl.to("#banner-web", { duration: 0.5, scale: 1.1, opacity: 0 })
       .to("#logo-mask", { maskSize: "clamp(20vh,25%, 30vh)" }, "<")
       .to("#btn-shop", { opacity: 0, duration: 0.3 }, "<")
-      .to("#logo-mask", {
-        translateY: "-427px",
-        translateX: "-55px",
+      /*{ .to("#logo-mask", {
+        translateY: "-45.25vh",
+        translateX: "-2.9vw",
         duration: 0.5,
+      })}*/
+      .to("#logo-mask", {
+        scale: 0.16,
+        duration: 0.1,
       })
-      .to("#logo-mask", { scale: 0.16, duration: 0.3 }, "<")
+
       .to(
         "#img-3",
         {
@@ -36,7 +40,18 @@ function App() {
         },
         "<"
       )
-      .to("#img-2", { translateX: "-400px", opacity: 1, rotation: "3px" }, "<");
+      .to("#img-2", { translateX: "-400px", opacity: 1, rotation: "3px" }, "<")
+      .to("#first-title", { translateX: "2vh", opacity: 1 }, "<")
+      .to("#second-title", { translateX: "-2vh", opacity: 1 }, "<")
+      .to(
+        "#logo-mask",
+        {
+          opacity: 0,
+
+          duration: 0.1,
+        },
+        "<"
+      );
   }, []);
 
   return (
@@ -44,7 +59,7 @@ function App() {
       <div className="noise-overlay h-[300vh] w-full bg-amber-400 z-50"></div>
       <header className="w-full items-center flex  justify-center bg-transparent  ">
         <RxHamburgerMenu
-          className=" top-8 left-20 fixed text-white z-10 "
+          className=" top-8 left-20 fixed text-white z-10 cursor-pointer  hover:scale-105 transition-all duration-300"
           size={28}
           strokeWidth={0.3}
         />
@@ -56,7 +71,7 @@ function App() {
         />
 
         <RiShoppingBag4Line
-          className=" top-8 right-20 fixed text-white z-10 "
+          className=" top-8 right-20 fixed text-white z-10  cursor-pointer hover:scale-105 transition-all duration-300"
           size={28}
         />
       </header>
@@ -81,14 +96,20 @@ function App() {
         </div>
       </section>
 
-      <section className="min-h-screen w-full relative items-center gap-1 justify-center flex flex-col mt-[200vh] overflow-x-hidden">
-        <h1 className="text-5xl -ml-20 text-white text-left uppercase  z-10  -tracking-wider  -skew-1">
+      <section className="h-screen w-full relative items-center gap-1 justify-center flex flex-col mt-[200vh] overflow-x-hidden">
+        <h1
+          id="first-title"
+          className="text-5xl -ml-20 text-white text-left uppercase  z-10  -tracking-wider  -skew-1  -translate-x-20"
+        >
           Create your own{" "}
           <i>
             <strong>rules</strong>,
           </i>
         </h1>
-        <h1 className="text-5xl ml-20   text-left uppercase  z-10  -tracking-wider  bg-white px-3 py-1 -skew-1 text-red-700">
+        <h1
+          id="second-title"
+          className="text-5xl ml-20   text-left uppercase  z-10  -tracking-wider  bg-white px-3 py-1 -skew-1 text-red-700 translate-x-20"
+        >
           create your own{" "}
           <i>
             <strong>style</strong>
@@ -98,16 +119,16 @@ function App() {
           id="img-2"
           src="./2.webp"
           alt="Fotografía modelo con Red Lines Boxer"
-          className="w-[450px] absolute -right-40 opacity-0"
+          className="md:w-[250px] xl:w-[450px] absolute -right-40 opacity-0"
         />
         <img
           id="img-3"
           src="./3.webp"
           alt="Fotografía modelo con Lucky Green Cap"
-          className="w-[450px] absolute -left-40 opacity-0"
+          className="md:w-[250px] xl:w-[450px] absolute -left-40 opacity-0"
         />
       </section>
-      <section className=" w-full relative items-center gap-20  justify-start flex flex-col px-80   overflow-x-hidden">
+      <section className=" w-full relative items-center gap-20 md:mt-16 xl:mt-6 justify-start flex flex-col px-60 xl:px-80   overflow-x-hidden">
         <nav className="flex flex-col w-full">
           <ul className="flex flex-col gap-2">
             <li className="group relative uppercase text-white text-3xl cursor-pointer flex gap-2 opacity-80 hover:opacity-100">
@@ -145,7 +166,7 @@ function App() {
           </ul>
         </nav>
       </section>
-      <section className=" w-full  relative items-center   justify-start flex flex-col px-80 overflow-x-hidden mt-28 h-[450px]">
+      <section className=" w-full  relative items-center   justify-start flex flex-col px-60 xl:px-80 overflow-x-hidden mt-28 h-[700px]">
         <h3 className="w-full text-left uppercase text-xl text-white">
           Best Sellers
         </h3>
@@ -179,30 +200,9 @@ function App() {
             </div>
           </div>
         </div>
-        <button className=" -skew-2  mt-6 bg-white text-lg font-semibold px-6 py-2  uppercase cursor-pointer hover:scale-105 duration-300 transtion-all ">
+        <button className=" -skew-2  mt-8 bg-white text-lg font-semibold px-6 py-2  uppercase cursor-pointer hover:scale-105 duration-300 transtion-all ">
           Show more
         </button>
-      </section>
-      <section className=" w-full min-h-screen relative items-center   justify-start flex flex-col px-80  overflow-x-hidden mt-28">
-        <h3 className="w-full text-left uppercase text-xl text-white">
-          Behind Milfshakes
-        </h3>
-        <div className="flex gap-4 mt-6 ">
-          <img src="./nil-ojeda.webp" className="w-80 " />
-          <div className="flex flex-col gap-1 text-white w-80">
-            <h3 className="text-3xl font-semibold">Nil Ojeda</h3>
-            <h4 className="uppercase text-xl">Fundador de MilfShakes</h4>
-
-            <p className="text-md text-white mt-6">
-              Ha llevado su visión irreverente y creativa del streetwear a otro
-              nivel. Con un estilo que mezcla la nostalgia de los 90’s, la
-              cultura pop y un toque descarado, la marca nació como un proyecto
-              personal y se convirtió en un referente para quienes buscan ropa
-              que rompe las reglas. Cada colección es un guiño a su
-              personalidad: divertida, atrevida y siempre lista para sorprender.
-            </p>
-          </div>
-        </div>
       </section>
     </div>
   );
