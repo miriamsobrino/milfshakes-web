@@ -50,7 +50,7 @@ function App() {
         />
 
         <img
-          src="/logo-milfshakes-white.webp"
+          src="./logo-milfshakes-white.webp"
           alt="Logo MilfShakes"
           className="w-60 z-20 fixed  top-8 "
         />
@@ -67,7 +67,7 @@ function App() {
         <div className="relative w-full h-screen  ">
           <img
             id="banner-web"
-            src="/banner-home.webp"
+            src="./banner-home.webp"
             alt="Banner home última colección"
             className=" z-0  w-full "
           />
@@ -96,13 +96,13 @@ function App() {
         </h1>
         <img
           id="img-2"
-          src="/2.webp"
+          src="./2.webp"
           alt="Fotografía modelo con Red Lines Boxer"
           className="w-[450px] absolute -right-40 opacity-0"
         />
         <img
           id="img-3"
-          src="/3.webp"
+          src="./3.webp"
           alt="Fotografía modelo con Lucky Green Cap"
           className="w-[450px] absolute -left-40 opacity-0"
         />
@@ -151,28 +151,28 @@ function App() {
         </h3>
         <div className="grid grid-cols-4 mt-6 gap-4">
           <div className="group relative overflow-hidden cursor-pointer">
-            <img src="/gorra.webp" className="bg-white" />
+            <img src="./gorra.webp" className="bg-white" />
             <div className="w-full h-full  text-center absolute top-0 left-0 flex flex-col text-white justify-center items-center bg-red-600/20 backdrop-blur-2xl translate-y-100 group-hover:translate-y-0 transition-all duration-300">
               <h4 className="text-2xl font-semibold ">MLFSHKS CAP</h4>
               <span className="text-md">29,69€</span>
             </div>
           </div>
           <div className="group relative overflow-hidden cursor-pointer">
-            <img src="/chandal.webp" className="bg-white" />
+            <img src="./chandal.webp" className="bg-white" />
             <div className="w-full h-full  text-center absolute top-0 left-0 flex flex-col text-white justify-center items-center bg-red-600/20 backdrop-blur-2xl translate-y-100 group-hover:translate-y-0 transition-all duration-300">
               <h4 className="text-2xl font-semibold ">*** TRACKSUIT</h4>
               <span className="text-md">99,00€</span>
             </div>
           </div>
           <div className="group relative overflow-hidden cursor-pointer">
-            <img src="/shirtlovemilfs.webp" className="bg-white" />
+            <img src="./shirtlovemilfs.webp" className="bg-white" />
             <div className="w-full h-full  text-center absolute top-0 left-0 flex flex-col text-white justify-center items-center bg-red-600/20 backdrop-blur-2xl translate-y-100 group-hover:translate-y-0 transition-all duration-300">
               <h4 className="text-2xl font-semibold ">MILF LOVER TEE</h4>
               <span className="text-md">34,69€</span>
             </div>
           </div>
           <div className="group relative overflow-hidden cursor-pointer">
-            <img src="/hoodie.webp" className="bg-white" />
+            <img src="./hoodie.webp" className="bg-white" />
             <div className="w-full h-full  text-center absolute top-0 left-0 flex flex-col text-white justify-center items-center bg-red-600/20 backdrop-blur-2xl translate-y-100 group-hover:translate-y-0 transition-all duration-300">
               <h4 className="text-2xl font-semibold ">*** HOODIE RED</h4>
               <span className="text-md">59,69€</span>
