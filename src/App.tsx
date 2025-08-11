@@ -34,13 +34,13 @@ function App() {
       .to(
         "#img-3",
         {
-          translateX: "400px",
+          translateX: "500px",
           opacity: 1,
           rotation: "-3px",
         },
         "<"
       )
-      .to("#img-2", { translateX: "-400px", opacity: 1, rotation: "3px" }, "<")
+      .to("#img-2", { translateX: "-500px", opacity: 1, rotation: "3px" }, "<")
       .to("#first-title", { translateX: "2vh", opacity: 1 }, "<")
       .to("#second-title", { translateX: "-2vh", opacity: 1 }, "<")
       .to(
@@ -119,16 +119,16 @@ function App() {
           id="img-2"
           src="./2.webp"
           alt="Fotografía modelo con Red Lines Boxer"
-          className="md:w-[250px] xl:w-[450px] absolute -right-40 opacity-0"
+          className="w-[350px] absolute -right-40 opacity-0"
         />
         <img
           id="img-3"
           src="./3.webp"
           alt="Fotografía modelo con Lucky Green Cap"
-          className="md:w-[250px] xl:w-[450px] absolute -left-40 opacity-0"
+          className="w-[350px] absolute -left-40 opacity-0"
         />
       </section>
-      <section className=" w-full relative items-center gap-20 md:mt-16 xl:mt-6 justify-start flex flex-col px-60 xl:px-80   overflow-x-hidden">
+      <section className=" w-full relative items-center gap-20  justify-start flex flex-col px-80   overflow-x-hidden">
         <nav className="flex flex-col w-full">
           <ul className="flex flex-col gap-2">
             <li className="group relative uppercase text-white text-3xl cursor-pointer flex gap-2 opacity-80 hover:opacity-100">
